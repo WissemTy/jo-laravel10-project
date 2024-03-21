@@ -8,6 +8,6 @@
     @include("templateHeader")
 </head>
 <body>
-    a
+    <h1> HOME <h1>
 </body>
 </html>
