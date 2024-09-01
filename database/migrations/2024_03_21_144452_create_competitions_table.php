@@ -13,11 +13,14 @@ return new class extends Migration
     {
         Schema::create('competitions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('sports_id')->unique();
-            $table->foreignId('places_id')->unique();
+            $table->string('name');
+            $table->foreignId('sport_id')->constrained();
+            $table->foreignId('place_id')->constrained();
+            $table->string('type'); // 1er tour ; demi-finale ; finale
             $table->timestamp('timeStart');
             $table->timestamp('timeEnd');
-            $table->float('price', 2);
+            $table->unsignedInteger('place_restante');
+            $table->decimal('price', 8, 2);
             $table->timestamps();
         });
     }

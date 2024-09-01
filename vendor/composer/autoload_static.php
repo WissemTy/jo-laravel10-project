@@ -354,8 +354,8 @@ class ComposerStaticInitb62991670919fe54871b70608e94b36b
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -531,7 +531,14 @@ class ComposerStaticInitb62991670919fe54871b70608e94b36b
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AdminPanelController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminPanelController.php',
+        'App\\Http\\Controllers\\CalendarController' => __DIR__ . '/../..' . '/app/Http/Controllers/CalendarController.php',
+        'App\\Http\\Controllers\\CompetitionController' => __DIR__ . '/../..' . '/app/Http/Controllers/CompetitionController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginController.php',
+        'App\\Http\\Controllers\\PlaceController' => __DIR__ . '/../..' . '/app/Http/Controllers/PlaceController.php',
+        'App\\Http\\Controllers\\ReservationController' => __DIR__ . '/../..' . '/app/Http/Controllers/ReservationController.php',
+        'App\\Http\\Controllers\\SportController' => __DIR__ . '/../..' . '/app/Http/Controllers/SportController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -542,6 +549,11 @@ class ComposerStaticInitb62991670919fe54871b70608e94b36b
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Models\\Competitions' => __DIR__ . '/../..' . '/app/Models/Competitions.php',
+        'App\\Models\\Places' => __DIR__ . '/../..' . '/app/Models/Places.php',
+        'App\\Models\\Reservations' => __DIR__ . '/../..' . '/app/Models/Reservations.php',
+        'App\\Models\\Spectators' => __DIR__ . '/../..' . '/app/Models/Spectators.php',
+        'App\\Models\\Sports' => __DIR__ . '/../..' . '/app/Models/Sports.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',

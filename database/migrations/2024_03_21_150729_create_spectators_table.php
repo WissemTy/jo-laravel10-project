@@ -15,9 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('firstName');
-            $table->integer('phoneNumber');
-            $table->string('email');
-            $table->foreignId('competitions_id');
+            $table->string('phoneNumber')->nullable();
+            $table->string('email')->nullable();
             $table->timestamps();
         });
     }

@@ -1,0 +1,45 @@
+Schema::create('sports', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->timestamps();
+});
+
+Schema::create('places', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->longText('description');
+    $table->string('capacity');
+    $table->timestamps();
+});
+
+Schema::create('competitions', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->foreignId('sport_id')->constrained();
+    $table->foreignId('place_id')->constrained();
+    $table->string('type'); // 1er tour ; demi-finale ; finale
+    $table->timestamp('timeStart');
+    $table->timestamp('timeEnd');
+    $table->unsignedInteger('place_restante');
+    $table->decimal('price', 8, 2);
+    $table->timestamps();
+});
+
+Schema::create('spectators', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->string('firstName');
+    $table->string('phoneNumber')->nullable();
+    $table->string('email')->nullable();
+    $table->timestamps();
+});
+
+Schema::create('reservations', function (Blueprint $table) {
+    $table->id();
+    $table->foreignId('competition_id')->constrained();
+    $table->foreignId('personne_id_1')->constrained('spectators');
+    $table->foreignId('personne_id_2')->nullable()->constrained('spectators');
+    $table->foreignId('personne_id_3')->nullable()->constrained('spectators');
+    $table->foreignId('personne_id_4')->nullable()->constrained('spectators');
+    $table->foreignId('personne_id_5')->nullable()->constrained('spectators');
+});
